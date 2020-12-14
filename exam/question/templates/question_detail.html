@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    <form action="">
+
+    <p>{{question_obj.question}}</p>
+        {% for q in question_obj.option.all %}
+              <input type="radio" id="question" name="question" value="question">
+              <label for="question">{{q.tilte}}</label><br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+
+    </form>
+
+{% endblock content %}

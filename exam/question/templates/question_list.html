@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    {% for e in questions %}
+        <a href="{% url 'question_detail' e.id %}">{{e.question}}</a>
+    {% endfor %}
+
+{% endblock content %}
+
+
